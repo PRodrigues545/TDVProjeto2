@@ -29,4 +29,7 @@ Por cada tubo que se passe, a pontuação aumenta em 1 valor
 ## Bird.cs
 ![variaveis](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/573695c7-ba2d-43ab-bdb8-9a14009cd9b8)
 
+Estas variaveis são usadas para a animação, o som das asas, a posição inicial do passaro e as suas dimensões.
+
 ![construtor passaro](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/40c3e4c6-d59b-4096-9430-aaefeb2a14f7)
+
