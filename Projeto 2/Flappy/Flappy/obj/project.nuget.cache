@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "X7tCk9oYVFhefwBtLXdB/ihHCp4rSyTp6XzN42dH/7n8yo14TrGoj8ACnAICXWkHJ2UkhU6m6crZKSugQ521PQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programação\\Projeto 2\\Flappy\\Flappy\\Flappy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pedro\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Pedro\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
