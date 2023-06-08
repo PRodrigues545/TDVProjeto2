@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/Programação/Projeto 2/Flappy/Flappy/Content/die.mp3</SourceFile>
+  <SourceTime>2022-02-23T02:58:12+00:00</SourceTime>
+  <DestFile>D:/Programação/Projeto 2/Flappy/Flappy/Content/bin/DesktopGL/die.xnb</DestFile>
+  <DestTime>2023-06-08T13:28:03.1765401+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T12:44:56+01:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T12:44:56+01:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -14,17 +14,24 @@ namespace Flappy.Classes
     {
         public const int PLAYING_STATE = 0;
         public const int LOSE_STATE = 1;
-
+        public const int PAUSE_STATE = 2;
 
         private MouseState mouseState;
         private int upDistance;
         private int horizontalDistanceCounter;
         private ArrayList arrayPipes;
         private int gameState;
+        private int score;
+        private int indexFrame = 0;
+        public static SoundEffect hitSound;
+        public static SoundEffect dieSound;
+        private bool point;
 
         public GameController()
         {
             gameState = 0;
+            score = 0;
+            point = true;
             mouseState = new MouseState();
             upDistance = 0;
             arrayPipes = new ArrayList();
@@ -77,7 +84,7 @@ namespace Flappy.Classes
             }
         }
 
-        public void LoseForImpactPipe(Bird bird)
+        public void VerifyLoseForImpactPipe(Bird bird)
         {
             foreach (Pipe pipe in arrayPipes.ToArray())
             {
@@ -90,9 +97,48 @@ namespace Flappy.Classes
             }
         }
 
+        public void VerifyLoseForImpactFloor(Bird bird)
+        {
+            if (bird.IsOnFloor())
+            {
+                hitSound.Play();
+                gameState = LOSE_STATE;
+            }
+        }
 
+        public void VerifyIncreaseScore(Bird bird)
+        {
+            foreach(Pipe pipe in arrayPipes.ToArray())
+            {
+                if(pipe.State == Pipe.FRONT_STATE)
+                {
+                    if(point && bird.Rectangle.X >= pipe.TopPipeRectangle.X && bird.Rectangle.Y > pipe.TopPipeRectangle.Y && bird.Rectangle.Y < pipe.BottomPipeRectangle.Y)
+                    {
+                        score++;
+                        point = false;
+                    }
 
+                    if (bird.Rectangle.X >= pipe.TopPipeRectangle.Right)
+                    {
+                        point = true;
+                        pipe.State = Pipe.BACK_STATE;
+                    }
+                }
+            }
+        }
 
+        public int GetWingsBirdFrame(GameTime gameTime, Bird bird)
+        {
+            if ((int)gameTime.TotalGameTime.TotalMilliseconds % 20 == 0)
+            {
+                indexFrame++;
+                if (indexFrame == bird.Texture2D.Length)
+                {
+                    indexFrame = 0;
+                }
+            }
+            return indexFrame;
+        }
 
         public ArrayList ArrayPipes
         {
@@ -115,6 +161,18 @@ namespace Flappy.Classes
             set 
             {
                 this.gameState = value; 
+            }
+        }
+
+        public int Score
+        {
+            get
+            {
+                return score;
+            }
+            set
+            {
+                this.score = value;
             }
         }
     }

@@ -9,11 +9,17 @@
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/bird2.png</File>
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/bird3.png</File>
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/bottompipe.png</File>
+    <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/die.mp3</File>
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/floor.png</File>
+    <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/hit.mp3</File>
+    <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/scorefont.spritefont</File>
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/toppipe.png</File>
     <File>D:/Programação/Projeto 2/Flappy/Flappy/Content/wing.mp3</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

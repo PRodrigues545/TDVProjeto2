@@ -25,9 +25,11 @@ namespace Flappy.Classes
         public static int horizontalDistanceBetween;
         private readonly int position;
         private readonly int position2;
+        private int state;
 
         public Pipe()
         { 
+            state = FRONT_STATE;
             random = new Random();
             pipeHeight = 620;
             pipeWidth = 75;
@@ -75,5 +77,16 @@ namespace Flappy.Classes
             }
         }
 
+        public int State
+        {
+            get
+            {
+                return state;
+            }
+            set
+            {
+                this.state = value;
+            }
+        }
     }
 }

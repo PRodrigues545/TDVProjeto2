@@ -38,6 +38,12 @@ namespace Flappy.Classes
             rectangle = new Rectangle(initX, initY, initWidth, initHeight);
         }
 
+        public void ResetPosition()
+        {
+            rectangle.X = initX;
+            rectangle.Y = initY;
+        }
+
 
         public bool IsOnFloor()
         {

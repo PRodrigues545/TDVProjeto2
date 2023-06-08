@@ -13,6 +13,9 @@ namespace Flappy
         Scene scene;
         Bird bird;
         GameController gameController;
+        MouseState previousMouseState;
+        SpriteFont scoreFont;
+        private int indexFrame;
 
         public Game1()
         {
@@ -34,6 +37,7 @@ namespace Flappy
             scene = new Scene();
             bird = new Bird();
             gameController = new GameController();
+            previousMouseState = new MouseState();
             base.Initialize();
         }
 
@@ -52,6 +56,11 @@ namespace Flappy
 
             //carregar sons
             Bird.wingSound = Content.Load<SoundEffect>("wing");
+            GameController.hitSound = Content.Load<SoundEffect>("hit");
+            GameController.dieSound = Content.Load<SoundEffect>("die");
+
+            //fontes
+            scoreFont = Content.Load<SpriteFont>("scorefont");
         }
 
         protected override void Update(GameTime gameTime)
@@ -59,21 +68,42 @@ namespace Flappy
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-          switch (gameController.GameState)
-           {
-               case GameController.PLAYING_STATE:
-                   scene.Move();
-                   gameController.RaiseBirdOnClick(bird);
-                   gameController.AddPipes();
-                   gameController.MovePipes();
-                   break;
-               case GameController.LOSE_STATE:
-                    if(Mouse.GetState().LeftButton == ButtonState.Pressed)
+            switch (gameController.GameState)
+            {
+                case GameController.PLAYING_STATE:
+                    scene.Move();
+                    indexFrame = gameController.GetWingsBirdFrame(gameTime, bird);
+                    gameController.RaiseBirdOnClick(bird);
+                    gameController.AddPipes();
+                    gameController.MovePipes();
+                    gameController.VerifyLoseForImpactPipe(bird);
+                    gameController.VerifyLoseForImpactFloor(bird);
+                    gameController.VerifyIncreaseScore(bird);
+                    if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
+                    {
+                        gameController.GameState = GameController.PAUSE_STATE;
+                    }
+                    previousMouseState = Mouse.GetState();
+                    break;
+                case GameController.LOSE_STATE:
+                    if(previousMouseState.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
                     {
                         gameController.GameState = GameController.PLAYING_STATE;
+                        gameController.ArrayPipes.Clear();
+                        bird.ResetPosition();
+                        gameController.Score = 0;
                     }
-                   break;
-           }
+                    previousMouseState = Mouse.GetState();
+                    break;
+                case GameController.PAUSE_STATE:
+                    if (previousMouseState.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                    {
+                        gameController.GameState = GameController.PLAYING_STATE;
+
+                    }
+                    previousMouseState = Mouse.GetState();
+                    break;
+            }
 
             base.Update(gameTime);
         }
@@ -99,9 +129,11 @@ namespace Flappy
             spriteBatch.Draw(scene.FloorTexture, scene.FloorRectangle, Color.White);
             spriteBatch.Draw(scene.FloorTexture, scene.FloorRectangle2, Color.White);
 
-            spriteBatch.Draw(bird.Texture2D[0], bird.Rectangle, Color.White);
-            
-
+            //passaro
+            spriteBatch.Draw(bird.Texture2D[indexFrame], bird.Rectangle, Color.White);
+             
+            //score
+            spriteBatch.DrawString(scoreFont, gameController.Score.ToString(), new Vector2((graphics.PreferredBackBufferWidth / 2) - (scoreFont.MeasureString(gameController.Score.ToString()).X / 2), 10), Color.White);
             spriteBatch.End();
 
 

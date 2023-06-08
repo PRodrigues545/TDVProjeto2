@@ -31,3 +31,6 @@ D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\bird3.xnb
 D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\wing.xnb
 D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\bottompipe.xnb
 D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\toppipe.xnb
+D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\die.xnb
+D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\hit.xnb
+D:\Programação\Projeto 2\Flappy\Flappy\bin\Debug\net6.0\Content\scorefont.xnb
