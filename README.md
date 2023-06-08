@@ -98,4 +98,63 @@ Gerar aleatoriamente a posição dos tubos e move-los quando sao estanciados nov
 
 ## GameController.cs
 
+Classe foi criada nao sobrecarregar a classe Game1.cs com codigo, e serve para controlar o jogo
+
+![variaveis gameController](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/d29bb5d4-a3f7-482d-bd2b-57e7d34006e6)
+
+Estas variaveis sao usadas para definir o estado atual do jogo (a jogar, derrota ou pausa), a arraylist com os tubos. pontuação e derrota
+
+.
+
+![Construtor gameController](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/3cd26dc2-8c8c-4716-9f25-2dc48dd3be48)
+
+.
+
+![controlador de tubos](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/2b6f06cc-a01e-4a2b-8eec-75e2256999b1)
+
+Funções usadas para adicionar e mover os tubos
+
+.
+
+![click](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/b2832c4c-dd80-4212-b165-5e1eaf60432b)
+
+Mecanica para o movimento do passaro. Left click para subir
+
+.
+
+![Derrota](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/e61b6ec8-204a-4b78-a786-12e5c2790320)
+
+Funções que verificam a cada frame se o passaro entra em contacto com os tubos ou o chao
+
+.
+
+![Score](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/3b1a8b2c-f54d-4703-9dde-2998229afa67)
+
+Funçao usada para contar os pontos (é preciso passar por completo os tubos para contar)
+
+.
+
+![movimento asas](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/73248de6-d2a0-40e1-9d86-60d3dbeb56a5)
+
+Função para calcular o tempo entre cada frame da animação do passaro
+
+## Game1.cs
+
+![variaveis game1](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/0a08c35c-c96d-4772-8b15-fb2012c465c3)
+
+.
+
+![inicialize](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/0c656344-2b62-44ac-b10a-df35f7ef4541)
+
+.
+
+![loadcontent](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/b7b882ca-2944-4b17-88a2-2f6bcf0ad055)
+
+.
+
+![update](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/af000876-cdbb-4927-9ab3-d5d0ab4eabf2)
+
+.
+
+![draw](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/b6cf1123-1246-4b5e-ba50-6d345d99138a)
 
