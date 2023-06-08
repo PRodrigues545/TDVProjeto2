@@ -133,7 +133,8 @@ namespace Flappy
             spriteBatch.Draw(bird.Texture2D[indexFrame], bird.Rectangle, Color.White);
              
             //score
-            spriteBatch.DrawString(scoreFont, gameController.Score.ToString(), new Vector2((graphics.PreferredBackBufferWidth / 2) - (scoreFont.MeasureString(gameController.Score.ToString()).X / 2), 10), Color.White);
+            spriteBatch.DrawString(scoreFont, gameController.Score.ToString(), new Vector2((graphics.PreferredBackBufferWidth / 2) - 
+                (scoreFont.MeasureString(gameController.Score.ToString()).X / 2), 10), Color.White);
             spriteBatch.End();
 
 

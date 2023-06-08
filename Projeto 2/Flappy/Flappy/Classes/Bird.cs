@@ -16,22 +16,18 @@ namespace Flappy.Classes
         private Rectangle rectangle;
         public static SoundEffect wingSound;
         private readonly int initX;
-        private int delayShoot;
         private readonly int initY;
         private readonly int initWidth;
         private readonly int initHeight;
         private bool isUp;
-        private ArrayList arrayFireBalls;
         public static GraphicsDeviceManager graphics;
-
+            
 
         public Bird()
         {
             texture2D = new Texture2D[3];
-            arrayFireBalls = new ArrayList();
             initWidth = 60;
             initHeight = 45;
-            delayShoot = 0;
             isUp = false;
             initX = (graphics.PreferredBackBufferWidth / 4) - (initWidth / 2);
             initY = (4 * (graphics.PreferredBackBufferHeight / 10)) - (initHeight / 2);
@@ -97,24 +93,5 @@ namespace Flappy.Classes
             }
         }
 
-        public int DelayShoot
-        {
-            get
-            {
-                return delayShoot;
-            }
-            set
-            {
-                this.delayShoot = value;
-            }
-        }
-
-        public ArrayList ArrayFireBalls
-        {
-            get
-            {
-                return arrayFireBalls;
-            }
-        }
     }
 }
