@@ -27,4 +27,5 @@ Por cada tubo que se passe, a pontuação aumenta em 1 valor
 # Aprofundamento das Classes:
 
 ## Bird.cs
-![Captura de ecrã 2023-05-22 154953](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/87308dd2-c03d-49c3-a8fc-141be60abbaa)
+![variaveis](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/573695c7-ba2d-43ab-bdb8-9a14009cd9b8)
+
