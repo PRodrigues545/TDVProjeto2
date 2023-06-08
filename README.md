@@ -33,3 +33,6 @@ Estas variaveis são usadas para a animação, o som das asas, a posição inici
 
 ![construtor passaro](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/40c3e4c6-d59b-4096-9430-aaefeb2a14f7)
 
+![Reset](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/3ce1dab5-6dad-4a39-a3f9-059f10d347b6)
+Esta função é usada para dar reset á posição do passaro, usada quando o jogador perde
+
