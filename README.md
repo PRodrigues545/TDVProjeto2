@@ -36,5 +36,4 @@ Por cada tubo que se passe, a pontuação aumenta em 1 valor
         private readonly int initWidth;
         private readonly int initHeight;
         private bool isUp;
-        private ArrayList arrayFireBalls;
-        public static GraphicsDeviceManager graphics
+        public static GraphicsDeviceManager graphicss![Captura de ecrã 2023-05-22 154953](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/fae63dbe-f58c-4799-937f-a9f2f6dfe243)
