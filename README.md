@@ -25,3 +25,16 @@ Este jogo é o classico jogo flappy bird.
 Por cada tubo que se passe, a pontuação aumenta em 1 valor
 
 # Aprofundamento das Classes:
+
+## Bird.cs
+
+        private Texture2D[] texture2D;
+        private Rectangle rectangle;
+        public static SoundEffect wingSound;
+        private readonly int initX;
+        private readonly int initY;
+        private readonly int initWidth;
+        private readonly int initHeight;
+        private bool isUp;
+        private ArrayList arrayFireBalls;
+        public static GraphicsDeviceManager graphics
