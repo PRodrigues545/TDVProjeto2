@@ -94,7 +94,6 @@ Estas variaveis sao usadas para a textura dos tubos, se estao ou nao atras do pa
 
 Gerar aleatoriamente a posição dos tubos e move-los quando sao estanciados novos tubos
 
-.
 
 ## GameController.cs
 
