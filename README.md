@@ -59,7 +59,7 @@ Estas 2 funções sao usadas para fazer subir ou descer o passaro
 
 ## Scene.cs
 
-Classe usada para tratar do fundo e do chão
+Classe usada para fazer o fundo e o chão
 
 ![variaveis scene](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/9bfb638e-572a-4897-9c6e-0a8afb88b941)
 
@@ -74,4 +74,28 @@ Estas variaveis são usadas para tratar das animações do fundo e do chão
 ![mover fundo](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/3c3a5d76-459e-4867-8c94-d984adcf0caa)
 
 Funções usadas para fazer a animação do fundo
+
+
+## Pipe.cs
+
+Classe usada para fazer os tubos
+
+![variaveis pipe](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/5bcb9f6c-a5a4-4e23-999b-08d20722a846)
+
+Estas variaveis sao usadas para a textura dos tubos, se estao ou nao atras do passaro, o seu tamanho, a sua posiçao e a distancia entre tubos
+
+.
+
+![construtor pipe](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/a47dfd77-964d-4a2f-846f-721d1872eb07)
+
+.
+
+![funçoes pipe](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/0f311cb9-bdcb-45e9-a38a-7163e4e9a893)
+
+Gerar aleatoriamente a posição dos tubos e move-los quando sao estanciados novos tubos
+
+.
+
+## GameController.cs
+
 
