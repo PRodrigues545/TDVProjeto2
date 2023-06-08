@@ -27,13 +27,4 @@ Por cada tubo que se passe, a pontuação aumenta em 1 valor
 # Aprofundamento das Classes:
 
 ## Bird.cs
-
-        private Texture2D[] texture2D;
-        private Rectangle rectangle;
-        public static SoundEffect wingSound;
-        private readonly int initX;
-        private readonly int initY;
-        private readonly int initWidth;
-        private readonly int initHeight;
-        private bool isUp;
-        public static GraphicsDeviceManager graphicss![Captura de ecrã 2023-05-22 154953](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/fae63dbe-f58c-4799-937f-a9f2f6dfe243)
+![Captura de ecrã 2023-05-22 154953](https://github.com/PRodrigues545/TDVProjeto2/assets/117277133/87308dd2-c03d-49c3-a8fc-141be60abbaa)
